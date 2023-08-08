@@ -7,5 +7,8 @@
       </mat-form-field>
       <button mat-stroked-button (click)="submit()">Submit</button>
     </div>
+    <div *ngIf="result">
+      Result: {{result.explanation}}
+    </div>
   </div>
 </div>
