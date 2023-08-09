@@ -16,13 +16,15 @@ import { ListValidWordsComponent } from './valid-words/list-valid-words/list-val
 import { MatTableModule } from '@angular/material/table';
 import {MatListModule} from "@angular/material/list";
 import {MatExpansionModule} from "@angular/material/expansion";
+import { PointsGuideComponent } from './points-guide/points-guide.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddValidWordComponent,
     EnterWordComponent,
-    ListValidWordsComponent
+    ListValidWordsComponent,
+    PointsGuideComponent
   ],
   imports: [
     BrowserModule,
