@@ -1,5 +1,11 @@
 <div class="cont">
   <div class="container">
+
+    <!-- Title -->
+    <h2>Play</h2>
+    <mat-divider></mat-divider>
+
+    <!-- Enter word -->
     <h3>Enter a word</h3>
     <form class="input-container" (ngSubmit)="submit()">
       <mat-form-field appearance="outline">
@@ -8,6 +14,7 @@
       <button mat-stroked-button type="submit" [disabled]="!word">Submit</button>
     </form>
 
+    <!-- Result -->
     <div *ngIf="result" class="result-container">
       <h3>Your result for word "{{result.word}}":</h3>
       {{(result.explanation) ?? result.message}}<br>
@@ -15,8 +22,10 @@
       Total points: {{totalPoints}}
     </div>
 
+    <!-- Divider -->
     <mat-divider></mat-divider>
 
+    <!-- Points guide -->
     <app-points-guide></app-points-guide>
 
   </div>

@@ -1,8 +1,8 @@
-import {Injectable} from "@angular/core";
-import {HttpClient, HttpParams} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {ResultResponse} from "../../models/result-response";
-import {ConfigurationService} from "../../configuration/configuration.service";
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { ResultResponse } from '../../models/result-response';
+import { ConfigurationService } from '../../configuration/configuration.service';
 
 @Injectable({
   providedIn: 'root'

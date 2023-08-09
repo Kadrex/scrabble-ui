@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {EnterWordService} from "./enter-word.service";
-import {ResultResponse} from "../../models/result-response";
+import { EnterWordService } from './enter-word.service';
+import { ResultResponse } from '../../models/result-response';
 
 @Component({
   selector: 'app-enter-word',
@@ -9,7 +9,7 @@ import {ResultResponse} from "../../models/result-response";
 })
 export class EnterWordComponent implements OnInit {
 
-  word: string = "";
+  word: string = '';
   result: ResultResponse | undefined;
   totalPoints: number = 0;
 
@@ -27,7 +27,7 @@ export class EnterWordComponent implements OnInit {
     }, error => {
       console.error(error);
     });
-    this.word = "";
+    this.word = '';
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {PointsService} from "./points.service";
-import {Points} from "../../models/points";
-import {MatTableDataSource} from "@angular/material/table";
+import { PointsService } from './points.service';
+import { Points } from '../../models/points';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-points-guide',

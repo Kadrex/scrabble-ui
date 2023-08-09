@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ValidWord} from "../../models/valid-word";
-import {MatTableDataSource} from "@angular/material/table";
-import {ValidWordsManagementService} from "../service/valid-words-management.service";
-import {ValidWordsService} from "../service/valid-words.service";
+import { ValidWord } from '../../models/valid-word';
+import { MatTableDataSource } from '@angular/material/table';
+import { ValidWordsManagementService } from '../service/valid-words-management.service';
+import { ValidWordsService } from '../service/valid-words.service';
 
 @Component({
   selector: 'app-list-valid-words',

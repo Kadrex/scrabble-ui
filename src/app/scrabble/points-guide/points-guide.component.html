@@ -1,12 +1,15 @@
 <h3>Points guide</h3>
 
+<!-- Table -->
 <mat-table [dataSource]="datasource">
 
+  <!-- Points -->
   <ng-container matColumnDef="points">
     <mat-header-cell *matHeaderCellDef>Points</mat-header-cell>
     <mat-cell *matCellDef="let p">{{p.points}}</mat-cell>
   </ng-container>
 
+  <!-- Letters -->
   <ng-container matColumnDef="letters">
     <mat-header-cell *matHeaderCellDef>Letters</mat-header-cell>
     <mat-cell *matCellDef="let p">{{p.letters}}</mat-cell>

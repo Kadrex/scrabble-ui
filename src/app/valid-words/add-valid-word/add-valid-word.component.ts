@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ValidWordsManagementService} from "../service/valid-words-management.service";
-import {ResultResponse} from "../../models/result-response";
-import {ValidWordsService} from "../service/valid-words.service";
+import { ValidWordsManagementService } from '../service/valid-words-management.service';
+import { ResultResponse } from '../../models/result-response';
+import { ValidWordsService } from '../service/valid-words.service';
 
 @Component({
   selector: 'app-add-valid-word',
@@ -10,7 +10,7 @@ import {ValidWordsService} from "../service/valid-words.service";
 })
 export class AddValidWordComponent implements OnInit {
 
-  word: string = "";
+  word: string = '';
 
   showWords: boolean = false;
   result: ResultResponse | undefined;
@@ -32,7 +32,7 @@ export class AddValidWordComponent implements OnInit {
     }, error => {
       console.error(error);
     })
-    this.word = "";
+    this.word = '';
   }
 
 }
