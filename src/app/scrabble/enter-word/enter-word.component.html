@@ -5,13 +5,14 @@
       <mat-form-field appearance="outline">
         <input matInput [(ngModel)]="word" [ngModelOptions]="{standalone: true}">
       </mat-form-field>
-      <button mat-stroked-button type="submit">Submit</button>
+      <button mat-stroked-button type="submit" [disabled]="!word">Submit</button>
     </form>
 
     <div *ngIf="result" class="result-container">
       <h3>Your result for word "{{result.word}}":</h3>
       {{(result.explanation) ?? result.message}}<br>
-      Total points: {{result.points ?? 0}}
+      Points for this word: {{result.points ?? 0}}<br>
+      Total points: {{totalPoints}}
     </div>
 
     <mat-divider></mat-divider>

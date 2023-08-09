@@ -5,7 +5,7 @@
       <mat-form-field appearance="outline">
         <input matInput [(ngModel)]="word" [ngModelOptions]="{standalone: true}">
       </mat-form-field>
-      <button mat-stroked-button type="submit">Add</button>
+      <button mat-stroked-button type="submit" [disabled]="!word">Add</button>
     </form>
 
     <div *ngIf="result" class="result-container">

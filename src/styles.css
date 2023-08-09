@@ -9,3 +9,64 @@ body {
 .result-container {
   margin-bottom: 23px;
 }
+
+.mat-row {
+  min-height: 35px;
+  height: 35px;
+}
+
+.mat-header-row {
+  font-weight: bold;
+  min-height: 40px;
+  height: 40px;
+}
+
+.mat-header-cell {
+  color: black;
+  font-weight: bold;
+}
+
+.cont {
+  background-color: #f9f5f9;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.container {
+  background-color: white;
+  padding: 50px 70px;
+  width: 60%;
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid purple;
+  border-radius: 18px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-form-field {
+  width: 70%;
+}
+
+button {
+  height: 36px;
+  background-color: aliceblue;
+  width: 20%;
+  max-width: 77px;
+}
+
+mat-form-field {
+  margin-top: -2px;
+}
+
+::ng-deep mat-form-field .mat-form-field-flex .mat-form-field-infix {
+  padding: 2px 0 9px 0 !important;
+}
+
+::ng-deep mat-form-field .mat-form-field-flex {
+  background-color: white;
+  border-radius: 4px;
+}

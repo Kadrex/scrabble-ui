@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {EnterWordService} from "./enter-word.service";
-import {ResultResponse} from "../models/result-response";
+import {ResultResponse} from "../../models/result-response";
 
 @Component({
   selector: 'app-enter-word',
@@ -11,6 +11,7 @@ export class EnterWordComponent implements OnInit {
 
   word: string = "";
   result: ResultResponse | undefined;
+  totalPoints: number = 0;
 
   constructor(
     private service: EnterWordService
@@ -22,6 +23,7 @@ export class EnterWordComponent implements OnInit {
   submit() {
     this.service.submit(this.word).subscribe((response: ResultResponse) => {
       this.result = response;
+      this.totalPoints += response.points ?? 0;
     }, error => {
       console.error(error);
     });

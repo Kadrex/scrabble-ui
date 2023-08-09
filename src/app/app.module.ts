@@ -9,14 +9,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
-import { EnterWordComponent } from './enter-word/enter-word.component';
+import { EnterWordComponent } from './scrabble/enter-word/enter-word.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HttpClientModule } from '@angular/common/http';
 import { ListValidWordsComponent } from './valid-words/list-valid-words/list-valid-words.component';
 import { MatTableModule } from '@angular/material/table';
 import {MatListModule} from "@angular/material/list";
 import {MatExpansionModule} from "@angular/material/expansion";
-import { PointsGuideComponent } from './points-guide/points-guide.component';
+import { PointsGuideComponent } from './scrabble/points-guide/points-guide.component';
 
 @NgModule({
   declarations: [
