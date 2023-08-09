@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AddValidWordService} from "./add-valid-word.service";
+import {ValidWordsManagementService} from "../service/valid-words-management.service";
 
 @Component({
   selector: 'app-add-valid-word',
@@ -11,14 +12,19 @@ export class AddValidWordComponent implements OnInit {
   word: string = "";
 
   constructor(
-    private service: AddValidWordService
+    private service: AddValidWordService,
+    private managementService: ValidWordsManagementService
   ) { }
 
   ngOnInit(): void {
   }
 
   addWord() {
-    this.service.save(this.word).subscribe(result => console.log(result))
+    this.service.save(this.word).subscribe((_) => {
+      this.managementService.setValidWordsUpdated(true);
+    }, error => {
+      console.log(error);
+    })
     this.word = "";
   }
 

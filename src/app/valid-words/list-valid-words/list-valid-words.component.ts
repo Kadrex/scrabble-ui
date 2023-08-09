@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ListValidWordsService} from "./list-valid-words.service";
+import {ValidWord} from "../../models/valid-word";
+import {MatTableDataSource} from "@angular/material/table";
+import {ValidWordsManagementService} from "../service/valid-words-management.service";
 
 @Component({
   selector: 'app-list-valid-words',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListValidWordsComponent implements OnInit {
 
-  constructor() { }
+  validWords: string[] = [];
+  datasource: MatTableDataSource<ValidWord> = new MatTableDataSource<ValidWord>();
+
+  constructor(
+    private service: ListValidWordsService,
+    private managementService: ValidWordsManagementService
+  ) { }
 
   ngOnInit(): void {
+    this.managementService.validWordsUpdated.subscribe((_) => {
+      this.getValidWords();
+    });
+  }
+
+  private getValidWords(): void {
+    this.service.getAll().subscribe((words: ValidWord[]) => {
+      this.datasource.data = words;
+    });
   }
 
 }
