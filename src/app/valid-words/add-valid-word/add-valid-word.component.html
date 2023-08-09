@@ -1,0 +1,33 @@
+<div class="cont">
+  <div class="container">
+
+    <!-- Title -->
+    <h2>Valid words</h2>
+    <mat-divider></mat-divider>
+
+    <!-- Add a valid word -->
+    <h3>Add a valid word</h3>
+    <form class="input-container" (ngSubmit)="addWord()">
+      <mat-form-field appearance="outline">
+        <input matInput [(ngModel)]="word" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+      <button mat-stroked-button type="submit" [disabled]="!word">Add</button>
+    </form>
+
+    <!-- Result -->
+    <div *ngIf="result" class="result-container">
+      Word: {{result.word}}<br>
+      {{result.message}}
+    </div>
+
+    <!-- Valid words expansion panel -->
+    <mat-expansion-panel (opened)="showWords = true"
+                         (closed)="showWords = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{showWords ? 'Hide' : 'Show'}} all valid words</mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-list-valid-words></app-list-valid-words>
+    </mat-expansion-panel>
+
+  </div>
+</div>

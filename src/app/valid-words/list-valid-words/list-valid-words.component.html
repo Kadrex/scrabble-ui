@@ -1,0 +1,19 @@
+<!-- Table -->
+<mat-table [dataSource]="datasource">
+
+  <!-- Id -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>#</mat-header-cell>
+    <mat-cell *matCellDef="let word; let i = index">{{i + 1}}</mat-cell>
+  </ng-container>
+
+  <!-- Word -->
+  <ng-container matColumnDef="word">
+    <mat-header-cell *matHeaderCellDef>Word</mat-header-cell>
+    <mat-cell *matCellDef="let word">{{word.word}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="['id', 'word']" class="table-row"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['id', 'word']"></mat-row>
+
+</mat-table>

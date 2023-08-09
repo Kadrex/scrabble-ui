@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.result-container {
+  margin-bottom: 23px;
+}
+
+.mat-row {
+  min-height: 35px;
+  height: 35px;
+}
+
+.mat-header-row {
+  font-weight: bold;
+  min-height: 40px;
+  height: 40px;
+}
+
+.mat-header-cell {
+  color: black;
+  font-weight: bold;
+}
+
+.cont {
+  padding-bottom: 100px;
+}
+
+.container {
+  background-color: white;
+  padding: 50px 70px;
+  width: 60%;
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid purple;
+  border-radius: 18px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+mat-form-field {
+  width: 70%;
+}
+
+button {
+  height: 36px;
+  background-color: aliceblue;
+  width: 20%;
+  max-width: 77px;
+}
+
+mat-form-field {
+  margin-top: -2px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+}
