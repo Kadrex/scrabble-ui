@@ -1,3 +1,7 @@
+.cont {
+  padding-top: 80px;
+}
+
 ::ng-deep mat-form-field .mat-form-field-flex .mat-form-field-infix {
   padding: 2px 0 9px 0 !important;
 }

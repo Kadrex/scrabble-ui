@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {AddValidWordService} from "./add-valid-word.service";
 import {ValidWordsManagementService} from "../service/valid-words-management.service";
 import {ResultResponse} from "../../models/result-response";
+import {ValidWordsService} from "../service/valid-words.service";
 
 @Component({
   selector: 'app-add-valid-word',
@@ -16,7 +16,7 @@ export class AddValidWordComponent implements OnInit {
   result: ResultResponse | undefined;
 
   constructor(
-    private service: AddValidWordService,
+    private service: ValidWordsService,
     private managementService: ValidWordsManagementService
   ) { }
 

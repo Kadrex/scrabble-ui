@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ListValidWordsService} from "./list-valid-words.service";
 import {ValidWord} from "../../models/valid-word";
 import {MatTableDataSource} from "@angular/material/table";
 import {ValidWordsManagementService} from "../service/valid-words-management.service";
+import {ValidWordsService} from "../service/valid-words.service";
 
 @Component({
   selector: 'app-list-valid-words',
@@ -15,7 +15,7 @@ export class ListValidWordsComponent implements OnInit {
   datasource: MatTableDataSource<ValidWord> = new MatTableDataSource<ValidWord>();
 
   constructor(
-    private service: ListValidWordsService,
+    private service: ValidWordsService,
     private managementService: ValidWordsManagementService
   ) { }
 
