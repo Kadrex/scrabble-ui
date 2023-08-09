@@ -8,9 +8,10 @@
       <button mat-stroked-button (click)="addWord()">Add</button>
     </div>
 
-    <mat-expansion-panel>
+    <mat-expansion-panel (opened)="showWords = true"
+                         (closed)="showWords = false">
       <mat-expansion-panel-header>
-        <mat-panel-title>Click to see all valid words</mat-panel-title>
+        <mat-panel-title>{{showWords ? 'Hide' : 'Show'}} all valid words</mat-panel-title>
       </mat-expansion-panel-header>
       <app-list-valid-words></app-list-valid-words>
     </mat-expansion-panel>

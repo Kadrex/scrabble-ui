@@ -7,9 +7,13 @@
       </mat-form-field>
       <button mat-stroked-button (click)="submit()">Submit</button>
     </div>
-    <div *ngIf="result">
-      Result: {{result.explanation ?? result.message}}
+
+    <div *ngIf="result" class="result-container">
+      <h3>Your result for word "{{result.word}}":</h3>
+      {{(result.explanation) ?? result.message}}
     </div>
+
+    <mat-divider></mat-divider>
 
     <app-points-guide></app-points-guide>
 

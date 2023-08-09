@@ -60,3 +60,11 @@ button {
   background-color: white;
   border-radius: 4px;
 }
+
+mat-divider {
+  margin: 10px 0;
+}
+
+.result-container {
+  margin-bottom: 23px;
+}

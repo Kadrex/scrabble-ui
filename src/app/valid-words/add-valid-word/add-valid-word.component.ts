@@ -11,6 +11,8 @@ export class AddValidWordComponent implements OnInit {
 
   word: string = "";
 
+  showWords: boolean = false;
+
   constructor(
     private service: AddValidWordService,
     private managementService: ValidWordsManagementService
