@@ -8,6 +8,11 @@
       <button mat-stroked-button type="submit">Add</button>
     </form>
 
+    <div *ngIf="result" class="result-container">
+      Word: {{result.word}}<br>
+      {{result.message}}
+    </div>
+
     <mat-expansion-panel (opened)="showWords = true"
                          (closed)="showWords = false">
       <mat-expansion-panel-header>

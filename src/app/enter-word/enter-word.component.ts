@@ -21,8 +21,9 @@ export class EnterWordComponent implements OnInit {
 
   submit() {
     this.service.submit(this.word).subscribe((response: ResultResponse) => {
-      console.log(response);
       this.result = response;
+    }, error => {
+      console.error(error);
     });
     this.word = "";
   }
