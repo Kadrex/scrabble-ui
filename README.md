@@ -7,3 +7,4 @@ Backend runs on port 8082. If you need to change this, you also have to change i
 * Install node modules, run `npm i` in root of the project.
 * Run `ng serve`. Navigate to `http://localhost:4200/`.
 * Run backend (instruction in backend's REAMDE.md).
+* Please note that if you need to change frontend port, you must also change it in the backend.
