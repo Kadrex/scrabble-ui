@@ -1,16 +1,17 @@
 <div class="cont">
   <div class="container">
     <h3>Enter a word</h3>
-    <div class="input-container">
+    <form class="input-container" (ngSubmit)="submit()">
       <mat-form-field appearance="outline">
-        <input matInput [(ngModel)]="word">
+        <input matInput [(ngModel)]="word" [ngModelOptions]="{standalone: true}">
       </mat-form-field>
-      <button mat-stroked-button (click)="submit()">Submit</button>
-    </div>
+      <button mat-stroked-button type="submit">Submit</button>
+    </form>
 
     <div *ngIf="result" class="result-container">
       <h3>Your result for word "{{result.word}}":</h3>
-      {{(result.explanation) ?? result.message}}
+      {{(result.explanation) ?? result.message}}<br>
+      Total points: {{result.points ?? 0}}
     </div>
 
     <mat-divider></mat-divider>

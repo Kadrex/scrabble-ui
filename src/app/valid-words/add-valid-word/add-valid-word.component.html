@@ -1,12 +1,12 @@
 <div class="cont">
   <div class="container">
     <h3>Add a valid word</h3>
-    <div class="input-container">
+    <form class="input-container" (ngSubmit)="addWord()">
       <mat-form-field appearance="outline">
-        <input matInput [(ngModel)]="word">
+        <input matInput [(ngModel)]="word" [ngModelOptions]="{standalone: true}">
       </mat-form-field>
-      <button mat-stroked-button (click)="addWord()">Add</button>
-    </div>
+      <button mat-stroked-button type="submit">Add</button>
+    </form>
 
     <mat-expansion-panel (opened)="showWords = true"
                          (closed)="showWords = false">
