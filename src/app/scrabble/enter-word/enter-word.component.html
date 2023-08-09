@@ -18,7 +18,7 @@
     <div *ngIf="result" class="result-container">
       <h3>Your result for word "{{result.word}}":</h3>
       {{(result.explanation) ?? result.message}}<br>
-      Points for this word: {{result.points ?? 0}}<br>
+      Points for this word: {{result.points}}<br>
       Total points: {{totalPoints}}
     </div>
 
