@@ -8,7 +8,7 @@
       <button mat-stroked-button (click)="submit()">Submit</button>
     </div>
     <div *ngIf="result">
-      Result: {{result.explanation}}
+      Result: {{result.explanation ?? result.message}}
     </div>
   </div>
 </div>
