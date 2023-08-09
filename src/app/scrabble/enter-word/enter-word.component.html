@@ -17,9 +17,18 @@
     <!-- Result -->
     <div *ngIf="result" class="result-container">
       <h3>Your result for word "{{result.word}}":</h3>
-      {{(result.explanation) ?? result.message}}<br>
+      {{result.message}}<br>
       Points for this word: {{result.points}}<br>
       Total points: {{totalPoints}}
+
+      <!-- History -->
+      <div *ngIf="history.length > 0" class="history-container">
+        Previous words:
+        <p *ngFor="let word of history">
+          {{word.word}}: {{word.points}} points
+          <br>
+        </p>
+      </div>
     </div>
 
     <!-- Divider -->

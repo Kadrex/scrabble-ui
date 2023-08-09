@@ -13,6 +13,8 @@ export class EnterWordComponent implements OnInit {
   result: ResultResponse | undefined;
   totalPoints: number = 0;
 
+  history: ResultResponse[] = [];
+
   constructor(
     private service: EnterWordService
   ) { }
@@ -22,6 +24,9 @@ export class EnterWordComponent implements OnInit {
 
   submit() {
     this.service.submit(this.word).subscribe((response: ResultResponse) => {
+      if (this.result) {
+        this.history.push(this.result);
+      }
       this.result = response;
       this.totalPoints += response.points ?? 0;
     }, error => {
